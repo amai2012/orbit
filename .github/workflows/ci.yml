@@ -18,7 +18,9 @@ jobs:
     - uses: actions/checkout@v2
      
     - name: Prepare
-      run: ::add-path::{.local/bin}
+      run: |
+        mkdir -p .local/bin
+        ::add-path::{.local/bin}
       
     - name: Install missing
       run: pip3 install setuptools
