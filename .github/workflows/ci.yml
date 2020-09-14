@@ -19,8 +19,8 @@ jobs:
      
     - name: Prepare
       run: |
-        mkdir -p .local/bin
-        ::add-path::{.local/bin}
+        mkdir -p $GITHUB_WORKSPACE/.local/bin
+        ::add-path::{$GITHUB_WORKSPACE/.local/bin}
       
     - name: Install missing
       run: pip3 install setuptools
